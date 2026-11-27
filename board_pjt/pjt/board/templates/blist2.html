@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>뉴스 게시판</title>
+<title>뉴스 게시판2</title>
 <style>
         * {
             margin: 0;
@@ -369,44 +369,21 @@
 <input placeholder="검색어를 입력하세요." type="text"/>
 <button>검색</button>
 </div>
-<div>{{blist}}</div>
 <!-- NEWS LIST -->
-<div class="board-wrap"><table class="board-table"><thead><tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회수</th></tr></thead><tbody><tr>
-<tbody>
-    {% for board in blist %}
-    <td class="number">{{board.bno}}</td>
-<td class="subject"><a href="#">{{board.btitle}}</a></td>
-<td>{{board.bwriter}}</td>
-<td>{{board.bdate | date: 'y-m-d'}}</td>
-<td>{{board.bhit}}</td>
-</tr>
-{% end for %}
-</tbody>
-<tr>
-<td class="number">15</td>
-<td class="subject"><a href="#">편안한 여행을 위한 객실 서비스 안내</a></td>
-<td>관리자</td>
-<td>2026.09.10</td>
-<td>193</td>
-</tr><tr>
-<td class="number">14</td>
-<td class="subject"><a href="#">자연 속에서 즐기는 특별한 휴식 프로그램</a></td>
-<td>관리자</td>
-<td>2026.09.05</td>
-<td>176</td>
-</tr><tr>
-<td class="number">13</td>
-<td class="subject"><a href="#">가을 시즌 특별 패키지 출시</a></td>
-<td>관리자</td>
-<td>2026.08.28</td>
-<td>152</td>
-</tr><tr>
-<td class="number">12</td>
-<td class="subject"><a href="#">더욱 편리해진 리조트 이용 안내</a></td>
-<td>관리자</td>
-<td>2026.08.20</td>
-<td>121</td>
-</tr></tbody></table></div>
+<div class="board-wrap"><table class="board-table"><thead><tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회수</th></tr></thead>
+    <tbody>
+        {% for board in blist %}
+         <tr>
+            <td class="number">{{board.bno}}</td>
+            <td class="subject"><a href="#">{{board.bcontent}}</a></td>
+            <td>{{board.id}}</td>
+            <td>{{board.bdate | date:'y-m-d'}}</td>
+            <td>{{board.bhit}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
 <!-- WRITE BUTTON -->
 <div class="write-area">
 <a class="write-btn" href="#">
