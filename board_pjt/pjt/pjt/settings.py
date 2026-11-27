@@ -40,7 +40,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'board_pjt.urls'
+ROOT_URLCONF = 'pjt.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'board_pjt.wsgi.application'
+WSGI_APPLICATION = 'pjt.wsgi.application'
 
 
 # Database
